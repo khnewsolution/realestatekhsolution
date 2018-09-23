@@ -48,3 +48,4 @@ task wrapper(type: Wrapper) {
 }
 
 idea.module.inheritOutputDirs = true
+
