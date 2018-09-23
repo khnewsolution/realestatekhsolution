@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    password: 1
+    url: jdbc:postgresql://localhost:5433/realestatekhsolution
+    username: postgres
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+#spring:
+#      thymeleaf:
+#        cache: false
+#        prefix: classpath:/templates
+server:
+  port: 8080
+  context-path: /auth
+
+
