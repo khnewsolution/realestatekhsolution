@@ -1,7 +1,8 @@
-package realestatekhsolution.models;
+package realestatekhsolution.models.oauth2;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import realestatekhsolution.models.SecUser;
 
 import java.util.Collection;
 

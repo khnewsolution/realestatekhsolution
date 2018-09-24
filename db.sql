@@ -1,8 +1,8 @@
-INSERT INTO sec_role (role_id, role)
+INSERT INTO sec_role (id,role)
 VALUES
 	(1,'ADMIN');
 
-INSERT INTO sec_user (user_id, active, email, last_name, name, password)
+INSERT INTO sec_user (id, active, email, last_name, name, password)
 VALUES
 	(1,1,'admin@gmail.com','s','Sam','sam'),
 	(2,1,'admin@gmail.com','s','youtube','youtube');

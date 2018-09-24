@@ -1,5 +1,7 @@
 package realestatekhsolution.models;
 
+import realestatekhsolution.models.bases.BaseEntity;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -8,38 +10,23 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "sec_user")
-public class SecUser {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
-    private Long id;
-
-    @Column(name = "email")
+public class SecUser extends BaseEntity{
     private String email;
 
-    @Column(name = "name")
     private String name;
-    @Column(name = "password")
+
     private String password;
-    @Column(name = "last_name")
+
     private String lastName;
-    @Column(name = "active")
+
     private int active;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<SecRole> roles;
 
     public SecUser() {
     }
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }
@@ -52,10 +39,12 @@ public class SecUser {
         return name;
     }
 
+    @Column(name = "name")
     public void setName(String name) {
         this.name = name;
     }
 
+    @Column(name = "password")
     public String getPassword() {
         return password;
     }
@@ -64,6 +53,7 @@ public class SecUser {
         this.password = password;
     }
 
+    @Column(name = "last_name")
     public String getLastName() {
         return lastName;
     }
@@ -72,6 +62,7 @@ public class SecUser {
         this.lastName = lastName;
     }
 
+    @Column(name = "active")
     public int getActive() {
         return active;
     }
@@ -80,6 +71,8 @@ public class SecUser {
         this.active = active;
     }
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     public Set<SecRole> getRoles() {
         return roles;
     }

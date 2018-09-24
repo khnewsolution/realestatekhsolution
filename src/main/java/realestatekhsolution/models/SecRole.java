@@ -1,5 +1,7 @@
 package realestatekhsolution.models;
 
+import realestatekhsolution.models.bases.BaseEntity;
+
 import javax.persistence.*;
 
 /**
@@ -7,11 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "sec_role")
-public class SecRole {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "role_id")
-    private int roleId;
+public class SecRole extends BaseEntity {
 
     @Column(name = "role")
     private String role;
@@ -19,19 +17,15 @@ public class SecRole {
     public SecRole() {
     }
 
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
-    }
-
     public String getRole() {
         return role;
     }
 
     public void setRole(String role) {
+        this.role = role;
+    }
+
+    public SecRole(String role) {
         this.role = role;
     }
 }

@@ -1,12 +1,12 @@
 
-package realestatekhsolution;
+package realestatekhsolution.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import realestatekhsolution.models.MyUserPrincipal;
+import realestatekhsolution.models.oauth2.MyUserPrincipal;
 import realestatekhsolution.models.SecUser;
 import realestatekhsolution.repositories.UserRepository;
 
