@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import realestatekhsolution.models.SecUser;
+import realestatekhsolution.routs.MainURLs;
 import realestatekhsolution.services.api.UserServiceAPI;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class RestUserController {
     @Autowired
     public UserServiceAPI userServiceAPI;
 
-    @RequestMapping(value = "/users",method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = MainURLs.SEC_USERS_GET,method = {RequestMethod.GET, RequestMethod.POST})
     public List<SecUser> getAllUsers(){
         return (List<SecUser>) userServiceAPI.list();
     }

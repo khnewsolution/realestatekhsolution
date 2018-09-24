@@ -1,4 +1,4 @@
-package realestatekhsolution.error;
+package realestatekhsolution.errors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Created by Rith on 9/24/2018.
+ */
 // handle 403 page
 @Component
 public class MyAccessDeniedHandler implements AccessDeniedHandler {
